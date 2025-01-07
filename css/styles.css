@@ -7,13 +7,17 @@ body {
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #my_name {
     font-size: 32px;
 }
 
 @media (min-width: 1200px) {
     .main {
-        margin-top: 80px;
+        margin-top: 8%;
         position: relative;
     }
 
@@ -34,6 +38,21 @@ body {
     .main::after {
         right: 0;
     }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.important_text {
+    color: #d88d1a;
+    font-weight: bold;
+    transition: font-size 0.3s ease;
+}
+
+.important_text:hover {
+    font-size: 1.05em;
 }
 
 
@@ -83,8 +102,9 @@ body {
 }
 
 .profilePic {
-    width: 200px;
-    height: 200px;
+    width: 15%;
+    height: auto;
+    aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
     display: block;
@@ -162,4 +182,10 @@ body {
 
 .contact_section p {
     margin: 0;
+}
+
+.image_in_project {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
 }
