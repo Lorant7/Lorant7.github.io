@@ -1,0 +1,165 @@
+body {
+    font-family: monospace;
+    font-size: 18px;
+    background-color: #11183b;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+#my_name {
+    font-size: 32px;
+}
+
+@media (min-width: 1200px) {
+    .main {
+        margin-top: 80px;
+        position: relative;
+    }
+
+    .main::before,
+    .main::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #18204a;
+    }
+
+    .main::before {
+        left: 0;
+    }
+
+    .main::after {
+        right: 0;
+    }
+}
+
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
+}
+
+.navlink:visited,
+.navlink:active {
+    color: white;
+}
+
+.navlink:hover {
+    color: #d0d0d0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 200px);
+
+    z-index: 1000;
+    border-radius: 50px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    background-color: rgb(59, 66, 106, 1);
+}
+
+.navbar.faded {
+    background-color: rgb(59, 66, 106, 0.8);
+}
+
+.navbar:hover {
+    background-color: rgb(59, 66, 106, 1);
+}
+
+.profilePic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+    width: 100%;
+    min-height: auto;
+}
+
+#aboutSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutText {
+    flex: 1;
+    border-left: 2px solid white;
+    padding-left: 20px;
+}
+
+#projects_and_skills {
+    display: flex;
+    gap: 20px;
+}
+
+.project_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project_list_item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #3b426a;
+    border-radius: 50px;
+    flex: 1;
+    overflow: hidden;
+    max-height: 100px;
+    position: relative;
+
+    transition: transform 0.3s ease;
+}
+
+.project_list_item:hover {
+    transform: scale(1.02);
+}
+
+.project_image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project_list_text {
+    margin-left: 200px;
+}
+
+.contact_section {
+    border: 1px solid #18204a;
+    padding: 20px;
+}
+
+.contact_section p {
+    margin: 0;
+}
