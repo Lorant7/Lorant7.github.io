@@ -15,9 +15,13 @@ html {
     font-size: 32px;
 }
 
+.main {
+    padding: 5vh;
+}
+
 @media (min-width: 1200px) {
     .main {
-        margin-top: 8%;
+        margin-top: 3%;
         position: relative;
     }
 
@@ -190,4 +194,20 @@ a {
     height: auto;
 }
 
-/* Testing why the css did not update in the github */
+.blog_image_cont {
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.blog_page_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.blog_title {
+    text-align: center;
+}

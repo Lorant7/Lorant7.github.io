@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomas Lorant | Song Vibe Blog 1</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="section" id="navbar">
+            <nav class="navbar">
+                <a href="projects.html" class="navlink">Projects</a>
+                <a href="index.html" class="navlink" id="my_name">TOMAS LORANT</a>
+                <a href="blog.html" class="navlink">Blog</a>
+            </nav>
+        </div>
+        <div class="blog_image_cont">
+            <img src="images/guitars.jpg" alt="Guitar Rack" class="blog_page_img">
+        </div>
+        <div class="blog_title">
+            <h2>Song Vibe Blog #1</h2>
+        </div>
+        <div class="blog_content">
+            <p>As I look back on my progress this week, it’s clear that much of my focus has been on research and
+                learning the foundational concepts for my project. The goal is to create a system that recommends songs
+                based on the "vibe" of a song, using a vector database and machine learning techniques, similar to how
+                NLP models work with word embeddings.</p>
+            <h3>Things I've Learned</h3>
+            <p>I’ve been looking into a lot of material about audio data extraction and analysis, as well as machine
+                learning models. A key part of this project involves using librosa, a Python library for audio analysis.
+                This tool lets me extract features like beats, onset strength, and even decompose audio into harmonic
+                and percussive components. All of this data can later be used to represent the song in a
+                high-dimensional vector space, allowing us to capture its "vibe."</p>
+            <p>I’ve also been reading up on various machine learning models. In the past I have worked with Recurrent
+                Neural Networks (RNNs)
+                and Convolutional Neural Networks (CNNs), and similar other models, but I plan on using more powerful
+                models. Even though CNNs are traditionally used for images, I’m considering applying them to audio data,
+                where each
+                "channel" could represent different features of the song. Additionally, matrix factorization techniques,
+                like Non-negative Matrix Factorization (NMF), could help identify hidden relationships between songs and
+                their features, which is a common technique in audio processing. I still have to look more into it, but
+                I
+                am considering (because for the best results its probably the best option) using a pretrained model.
+            </p>
+            <h3>Things I am working on</h3>
+            <p>The core of the project will be creating a Multidimensional Song Database (MDSB), where each song is
+                represented by a vector of features. These features will be extracted using librosa, and they’ll allow
+                the model to compute similarity between songs based on their "vibe." I’m planning to start small by
+                building a dataset of songs with data extracted using yt_dlp, a tool that grabs audio from various
+                websites.</p>
+            <p>
+                One challenge I’m tackling is how to handle songs of varying lengths. To ensure consistency in the data
+                I extract, I’m considering splitting each song into smaller chunks (like 2 seconds) to generate
+                a vector for each segment. I could then either create a single “vibe vector” for the entire song or have
+                multiple vectors for different sections of the song.
+            </p>
+            <h3>Scalability Concerns</h3>
+            <p>
+                Since the project will involve a lot of data and computations, I’m also thinking ahead about
+                scalability. I plan to host the project on Azure, using tools like compute instances and clusters to
+                handle the computational load. In terms of the vector database, I’ve decided to use Milvus because it’s
+                free and highly scalable, which will be crucial as the project grows.
+            </p>
+            <h3>Next Steps</h3>
+            <p>I’m currently focused on understanding the intricacies of vector spaces and audio data. I’ve
+                been reading "Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares" to brush up
+                my knowledge on the linear algebra to be able to (when I get to it) understand more the data and the
+                model to fine tune to my needs. Next, I’ll also be focusing on testing the relevance of the features
+                I’m extracting to the “vibe” of a song.</p>
+        </div>
+        <div class="section contact_section">
+            <h3>Contact:</h3>
+            <p>Tomas Lorant</p>
+            <p>jt.lorant@gmail.com</p>
+            <p>+1 (305) 877-9533</p>
+            <p>My Github: <a href="https://github.com/Lorant7" target="_blank" class="important_text">Lorant7</a></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
