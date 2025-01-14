@@ -211,3 +211,14 @@ a {
 .blog_title {
     text-align: center;
 }
+
+.video_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    height: 30vh;
+    max-height: 1000px;
+}
